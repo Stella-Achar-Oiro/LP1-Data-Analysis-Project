@@ -7,7 +7,7 @@ Team: Prague <br>
 Link to Github Repo - https://github.com/Stella-Achar-Oiro/LP1-Data-Analysis-Project
 
 Project - Indian Startup Funding
-# Intro
+## Introduction
 
 ## Project Intro and Objective
 **Objective** - Our team is trying to venture into the Indian startup ecosystem. As the data experts of the team we are supposed to investigate the ecosystem and propose the best course of action.
@@ -40,13 +40,13 @@ The dataset available coonsists of the following peices of data;
 8. Stage (at which business is in while seeking/offered funding)
 
 **Note** - The 2018 Data Lacks some of the above data and has conflict of some data (like currency).
-# Hypothesis
+## Hypothesis
 
 **Null Hypothesis** – No factors determine the amount of funding offered to a start-up by venture capitalists in India.
 
 **Alternative Hypothesis** – A range of factors about a start-up(characteristics) such as sector it wants to venture into, use of technology or years its has been in existence, stage of growth and location determine the amount of funding offered to start-ups by venture capitalists in India.
 
-# Research Questions
+## Research Questions
 
 **Sector**
 1. What sectors have attracted the largest funding in the last 4 years?
@@ -66,60 +66,60 @@ The dataset available coonsists of the following peices of data;
 11. Does the year of founding determine/influence the funding amount?
 ## Installation
 Here is the section to install all the packages/libraries that will be needed to tackle the challlenge.
-# !pip install -q <lib_001> <lib_002> ...
+## !pip install -q <lib_001> <lib_002> ...
 ## Importation
 Here is the section to import all the packages/libraries that will be used through this notebook.
-# Data handling
+## Data handling
 import pandas as pd
 
-# Vizualisation (Matplotlib, Plotly, Seaborn, etc. )
+## Vizualisation (Matplotlib, Plotly, Seaborn, etc. )
 ...
 
-# EDA (pandas-profiling, etc. )
+## EDA (pandas-profiling, etc. )
 ...
 
-# Feature Processing (Scikit-learn processing, etc. )
+## Feature Processing (Scikit-learn processing, etc. )
 ...
 
-# Machine Learning (Scikit-learn Estimators, Catboost, LightGBM, etc. )
+## Machine Learning (Scikit-learn Estimators, Catboost, LightGBM, etc. )
 ...
 
-# Hyperparameters Fine-tuning (Scikit-learn hp search, cross-validation, etc. )
+## Hyperparameters Fine-tuning (Scikit-learn hp search, cross-validation, etc. )
 ...
 
-# Other packages
+## Other packages
 import os
 
-# Data Loading
+## Data Loading
 Here is the section to load the datasets (train, eval, test) and the additional files
-# For CSV, use pandas.read_csv
-# Exploratory Data Analysis: EDA
+## For CSV, use pandas.read_csv
+## Exploratory Data Analysis: EDA
 Here is the section to **inspect** the datasets in depth, **present** it, make **hypotheses** and **think** the *cleaning, processing and features creation*.
 ## Dataset overview
 
 Have a look at the loaded datsets using the following methods: `.head(), .info()`
-# Code here
-# Code here
+## Code here
+## Code here
 ## Univariate Analysis
 
 ‘Univariate analysis’ is the analysis of one variable at a time. This analysis might be done by computing some statistical indicators and by plotting some charts respectively using the pandas dataframe's method `.describe()` and one of the plotting libraries like  [Seaborn](https://seaborn.pydata.org/), [Matplotlib](https://matplotlib.org/), [Plotly](https://seaborn.pydata.org/), etc.
 
 Please, read [this article](https://towardsdatascience.com/8-seaborn-plots-for-univariate-exploratory-data-analysis-eda-in-python-9d280b6fe67f) to know more about the charts.
-# Code here
+## Code here
 ## Multivariate Analysis
 
 Multivariate analysis’ is the analysis of more than one variable and aims to study the relationships among them. This analysis might be done by computing some statistical indicators like the `correlation` and by plotting some charts.
 
 Please, read [this article](https://towardsdatascience.com/10-must-know-seaborn-functions-for-multivariate-data-analysis-in-python-7ba94847b117) to know more about the charts.
-# Code here
-# Feature processing
+## Code here
+## Feature processing
 Here is the section to **clean** and **process** the features of the dataset.
 ## Missing/NaN Values
 Handle the missing/NaN values using the Scikif-learn SimpleImputer
-# Code Here
+## Code Here
 ## Scaling
 Scale the numeric features using the Scikif-learn StandardScaler, MinMaxScaler, or another Scaler.
-# Code here
+## Code here
 ## Encoding
 Encode the categorical features using the Scikif-learn OneHotEncoder.
-# Code here
+## Code here
