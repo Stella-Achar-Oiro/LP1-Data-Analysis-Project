@@ -4,7 +4,7 @@ Indian start-up funding project
 Name : Stella Achar Oiro <br>
 email: stella.achar@azubiafrica.org <br>
 Team: Prague <br>
-Link to Github Repo - 
+Link to Github Repo - https://github.com/Stella-Achar-Oiro/LP1-Data-Analysis-Project
 
 Project - Indian Startup Funding
 # Intro
