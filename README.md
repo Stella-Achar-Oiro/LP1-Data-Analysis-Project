@@ -42,7 +42,6 @@ The dataset available coonsists of the following peices of data;
 # Hypothesis
 
 **Null Hypothesis** – No factors determine the amount of funding offered to a start-up by venture capitalists in India.
-
 **Alternative Hypothesis** – A range of factors about a start-up(characteristics) such as sector it wants to venture into, use of technology or years its has been in existence, stage of growth and location determine the amount of funding offered to start-ups by venture capitalists in India.
 
 # Research Questions
@@ -63,3 +62,115 @@ The dataset available coonsists of the following peices of data;
 10. **Founders**
 10. Does the number of business owners (entrepreneurs) in a venture determine the amount/likelihood of funding from investors?
 11. Does the year of founding determine/influence the funding amount?
+## Installation
+Here is the section to install all the packages/libraries that will be needed to tackle the challlenge.
+# !pip install pandas
+## Importation
+Here is the section to import all the packages/libraries that will be used through this notebook.
+# Data handling
+import numpy as np
+import pandas as pd
+
+# Vizualisation (Matplotlib, Plotly, Seaborn, etc. )
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# EDA (pandas-profiling, etc. )
+...
+
+# Feature Processing (Scikit-learn processing, etc. )
+...
+
+# Machine Learning (Scikit-learn Estimators, Catboost, LightGBM, etc. )
+...
+
+# Hyperparameters Fine-tuning (Scikit-learn hp search, cross-validation, etc. )
+...
+
+# Other packages
+import os
+# Data Loading
+Here is the section to load the datasets (train, eval, test) and the additional files
+# For CSV, use pandas.read_csv
+
+from google.colab import drive
+drive.mount('/content/drive')
+
+startupdf_2018 = pd.read_csv('/content/drive/MyDrive/India Startup Funding/startup_funding2018.csv')
+startupdf_2019 = pd.read_csv('/content/drive/MyDrive/India Startup Funding/startup_funding2019.csv')
+startupdf_2020 = pd.read_csv('/content/drive/MyDrive/India Startup Funding/startup_funding2020.csv')
+startupdf_2021 = pd.read_csv('/content/drive/MyDrive/India Startup Funding/startup_funding2021.csv')
+Drive already mounted at /content/drive; to attempt to forcibly remount, call drive.mount("/content/drive", force_remount=True).
+# Exploratory Data Analysis: EDA
+Here is the section to **inspect** the datasets in depth, **present** it, make **hypotheses** and **think** the *cleaning, processing and features creation*.
+## Dataset overview
+
+Have a look at the loaded datsets using the following methods: `.head(), .info()`
+# Get a summary of the 2018 data
+startupdf_2018.info()
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 526 entries, 0 to 525
+Data columns (total 6 columns):
+ #   Column         Non-Null Count  Dtype 
+---  ------         --------------  ----- 
+ 0   Company Name   526 non-null    object
+ 1   Industry       526 non-null    object
+ 2   Round/Series   526 non-null    object
+ 3   Amount         526 non-null    object
+ 4   Location       526 non-null    object
+ 5   About Company  526 non-null    object
+dtypes: object(6)
+memory usage: 24.8+ KB
+# Get a summary of the 2019 data
+startupdf_2019.info()
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 89 entries, 0 to 88
+Data columns (total 9 columns):
+ #   Column         Non-Null Count  Dtype  
+---  ------         --------------  -----  
+ 0   Company/Brand  89 non-null     object 
+ 1   Founded        60 non-null     float64
+ 2   HeadQuarter    70 non-null     object 
+ 3   Sector         84 non-null     object 
+ 4   What it does   89 non-null     object 
+ 5   Founders       86 non-null     object 
+ 6   Investor       89 non-null     object 
+ 7   Amount($)      89 non-null     object 
+ 8   Stage          43 non-null     object 
+dtypes: float64(1), object(8)
+memory usage: 6.4+ KB
+#Make the 2018 data Column names match the 2019-2021 data
+
+startupdf_2018.rename(columns={'Company Name' : 'Company/Brand', 'Industry' : 'Sector', 'Round/Series' : 'Stage', 'Amount' : 'Amount($)', 'Location' : 'HeadQuarter', 'About Company' : 'What it does'}, inplace = True)
+# View the 2018 dataframe columns
+startupdf_2018.columns
+Index(['Company/Brand', 'Sector', 'Stage', 'Amount($)', 'HeadQuarter',
+       'What it does'],
+      dtype='object')
+#View the 2018 columns data types
+
+startupdf_2018.info()
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 526 entries, 0 to 525
+Data columns (total 6 columns):
+ #   Column         Non-Null Count  Dtype 
+---  ------         --------------  ----- 
+ 0   Company/Brand  526 non-null    object
+ 1   Sector         526 non-null    object
+ 2   Stage          526 non-null    object
+ 3   Amount($)      526 non-null    object
+ 4   HeadQuarter    526 non-null    object
+ 5   What it does   526 non-null    object
+dtypes: object(6)
+memory usage: 24.8+ KB
+#Concatenate all four dataframes
+#Vertical concatenation used (axis=0 ) means along rows
+#ignore-Index parameter to reset the index
+
+startup_df = pd.concat([startupdf_2018, startupdf_2019, startupdf_2020, startupdf_2021], axis=0, ignore_index=True, sort=False)
+#View concatenated dataframe to confirm
+
+startup_df
+
+
+
