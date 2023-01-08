@@ -33,3 +33,33 @@ The dataset available coonsists of the following peices of data;
 2. Year of Founding
 3. Location/Headquarters of Business
 4. Sector of the business
+5. Founders (Owners)
+6. Investor (assume it’s the VCs)
+7. Amount of Funding
+8. Stage (at which business is in while seeking/offered funding)
+
+**Note** - The 2018 Data Lacks some of the above data and has conflict of some data (like currency).
+# Hypothesis
+
+**Null Hypothesis** – No factors determine the amount of funding offered to a start-up by venture capitalists in India.
+
+**Alternative Hypothesis** – A range of factors about a start-up(characteristics) such as sector it wants to venture into, use of technology or years its has been in existence, stage of growth and location determine the amount of funding offered to start-ups by venture capitalists in India.
+
+# Research Questions
+
+**Sector**
+1. What sectors have attracted the largest funding in the last 4 years?
+2. Who are the major funders of ventures in India in the last 4 years? And what are the major sectors they are directing their funding?
+3. What are the Maximum, Minimum, Average and Median Funding amounts offered to each sector/ stage of funding and how do they compare?
+4. What is the trend of financing over the four years, cumulatively (total funding) and in independent sectors? (Monthly and/Yearly Trends)
+**Technology**
+5. What business technologies have recieved the highest funding or have been funded more over the last four years?
+**Location**
+6. What locations have received the biggest funding?
+7. What is the spread of Venture Capital funding in India regionally and how do they compare?
+**Stage**
+8. Does the stage of the venture affect the amount of funding offered to ventures?
+9. How many ventures that have got a previous round of financing gone on to successfully raise another stage of financing?
+10. **Founders**
+10. Does the number of business owners (entrepreneurs) in a venture determine the amount/likelihood of funding from investors?
+11. Does the year of founding determine/influence the funding amount?
